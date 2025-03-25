@@ -1,0 +1,4 @@
+ \multirow{3}{2cm}{Argon} & $\textnormal{OF}_1$ & 3.43 & 124.98 & 13.52 &  \cellcolor{lightgray!40} 1.13 &  \cellcolor{lightgray!40} 2.71 &  \cellcolor{lightgray!40} 3.29 &  5.75 &  4.43 &  1.57 &  0.85 &  \textbf{1.16} &  4.59 \\ 
+   & $\textnormal{OF}_2$ & 3.44 & 123.19 & 13.16 &  \cellcolor{lightgray!40} \textbf{0.90} &  \cellcolor{lightgray!40} 3.31 &  \cellcolor{lightgray!40} 2.70 &  4.21 &  \textbf{0.34} &  \textbf{0.57} &  \cellcolor{lightgray!40} 1.80 &  1.24 &  4.56 \\ 
+   & $\textnormal{OF}_3$ & 3.42 & 124.62 & 13.53 &  \cellcolor{lightgray!40} 1.90 &  \cellcolor{lightgray!40} \textbf{2.04} &  \cellcolor{lightgray!40} \textbf{2.23} &  \cellcolor{lightgray!40} \textbf{3.68} &  \cellcolor{lightgray!40} 0.35 &  \cellcolor{lightgray!40} 1.20 &  \textbf{0.57} &  1.29 &  \textbf{3.95} \\ 
+  
