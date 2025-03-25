@@ -1,6 +1,6 @@
 # Supplementary information: "Fitting a Square Peg in a Round Hole: parameterisation of quasi-spherical molecules employing the Mie potential" by Gustavo Chaparro and Erich A. Müller.
 
-This repository is part of the supplementary data of the article "Fitting a Square Peg in a Round Hole: parameterisation of quasi-spherical molecules employing the Mie potential". This repository includes scripts and ANN-based models to reproduce the results of the article.
+This repository is part of the supplementary data of the article "Fitting a Square Peg in a Round Hole: parameterisation of quasi-spherical molecules employing the Mie potential" (submitted). This repository includes scripts and ANN-based models to reproduce the results of the article.
 
 The following folders are included:
 1. [Calculation scripts](./1_calculation_scripts). This folder includes the Jupyter notebooks used to parameterise the Mie potential for several quasi-spherical molecules. The results are ultimately saved in the [computed_files](./computed_files/) folder.
