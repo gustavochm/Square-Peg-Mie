@@ -155,6 +155,7 @@ def mie_data_si_units(sigma, epsilon, Mw, data_df, Cvid_by_R, non_vibrational_de
     df_vle_mie['diffl_vle_model'] /= diff_factor      # m2/s
     df_vle_mie['viscl_vle_model'] /= visc_factor      # Pa s
     df_vle_mie['tcondl_vle_model'] /= tcond_factor    # W/m K
+    df_vle_mie['tcondl_vle_model_ann'] = 1. * df_vle_mie['tcondl_vle_model']
 
     # Computing speed of sound
     Cvid_R = Cvid_by_R(df_vle_mie['T_vle_model'].to_numpy())
@@ -167,6 +168,7 @@ def mie_data_si_units(sigma, epsilon, Mw, data_df, Cvid_by_R, non_vibrational_de
     # Correcting thermal conductivity
     Cvid_R_nonvib = Cvid_R - non_vibrational_deg_freedom/2
     tcond_liq_correction = df_vle_mie['rhol_vle_model'].to_numpy() * df_vle_mie['diffl_vle_model'].to_numpy() * (Cvid_R_nonvib * R)
+    df_vle_mie['tcondl_vle_model_vib'] = tcond_liq_correction
     df_vle_mie['tcondl_vle_model'] += tcond_liq_correction
 
     dict_values_mie['vle'] = df_vle_mie

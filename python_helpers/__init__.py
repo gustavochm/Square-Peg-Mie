@@ -3,3 +3,4 @@ from . import feanneos
 from . import transport_properties
 from .helpers import helper_get_alpha
 from .flax_utils import linear_activation
+from .galliero_CS import CG_FF_galliero

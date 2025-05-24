@@ -226,11 +226,11 @@ def mie_phase_equilibria_others_comparison(ExpDataFile, dict_models, width=3, he
         ax9.plot(df_vle['T_vle_model'], df_vle['tcondl_vle_model'], **kwargs)
 
         # fake triple points
-        ax7.plot(df_vle['T_vle_model'][0], df_vle['speed_of_sound_liq_vle_model'][0], 
+        ax7.plot(df_vle['T_vle_model'][0], df_vle['speed_of_sound_liq_vle_model'][0],
                  marker=marker_triple, linestyle='', markersize=markersize, color=kwargs['color'])
-        ax8.plot(df_vle['T_vle_model'][0], df_vle['viscl_vle_model'][0], 
+        ax8.plot(df_vle['T_vle_model'][0], df_vle['viscl_vle_model'][0],
                  marker=marker_triple, linestyle='', markersize=markersize, color=kwargs['color'])
-        ax9.plot(df_vle['T_vle_model'][0], df_vle['tcondl_vle_model'][0], 
+        ax9.plot(df_vle['T_vle_model'][0], df_vle['tcondl_vle_model'][0],
                  marker=marker_triple, linestyle='', markersize=markersize, color=kwargs['color'])
         # fake critical points
         ax7.plot(df_vle['T_vle_model'].values[-1], df_vle['speed_of_sound_liq_vle_model'].values[-1], 

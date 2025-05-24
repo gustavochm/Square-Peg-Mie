@@ -11,6 +11,7 @@ from figures_load_data import load_data_function
 from figures_phase_equilibria_others import mie_phase_equilibria_others_comparison
 from figures_Tc_Tt import plot_Tc_Tt_comparison
 from figures_selfdiff import plot_self_diffusivity_parity
+from figures_tcond_model import plot_tcond_model
 # markers
 marker_triple = 's'
 marker_crit = 'o'
@@ -25,7 +26,7 @@ base_height = 5.  # cm
 width_single_column = 8.  # cm
 width_two_columns = 14.  # cm
 width_three_columns = 17.  # cm
-dpi = 400
+dpi = 500
 format = 'pdf'
 fontsize_annotation = 8
 
@@ -224,3 +225,27 @@ if plot_figures:
     filename = f'appendix_self_diff_parity.{format}'
     file_to_save = os.path.join(folder_to_save, filename)
     fig.savefig(file_to_save, transparent=False)
+
+if plot_figures:
+    file_phase_solid = pd.ExcelFile('../computed_files/phase_equilibria_solid.xlsx')
+
+    df_tcond = pd.read_csv('../databases/mieparticle-tcond.csv')
+    df_tcond = df_tcond[df_tcond['is_fluid']].reset_index(drop=True)
+
+    df_vle_md = pd.read_csv('../databases/mieparticle-vle.csv')
+
+    lrs = [8, 12, 16, 24, 30]
+    T_lower = 0.6
+    T_upper = 1.5
+    rho_lower = -5e-2
+    rho_upper = 1.1
+
+    height = 2 * base_height / inTocm
+    width = width_three_columns / inTocm
+
+    fig = plot_tcond_model(file_phase_solid, df_tcond, df_vle_md,
+                            height=height, width=width, lrs=lrs,
+                            T_lower=T_lower, T_upper=T_upper)
+    filename = f'appendix_tcond_model.{format}'
+    file_to_save = os.path.join(folder_to_save, filename)
+    fig.savefig(file_to_save, transparent=False, dpi=dpi)
